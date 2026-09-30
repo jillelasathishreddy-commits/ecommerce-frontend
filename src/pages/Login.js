@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function Login() {
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -59,10 +61,8 @@ function Login() {
 
       setSuccess(data.message);
 
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user",
-        JSON.stringify(data.user)
-      );
+      login(data.token, data.user); 
+      
       setTimeout(() => {
        navigate("/products");
       }, 1000);
