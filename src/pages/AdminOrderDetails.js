@@ -1,13 +1,6 @@
-import React, {
-  useCallback,
-  useEffect,
-  useState
-} from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
-import {
-  Link,
-  useParams
-} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { useAuth } from "../context/AuthContext";
 
@@ -151,8 +144,7 @@ function AdminOrderDetails() {
 
         <p>
           <strong>Date:</strong>{" "}
-          {order.createdAt
-            ? new Date(
+          {order.createdAt ? new Date(
                 order.createdAt
               ).toLocaleDateString("en-IN")
             : "N/A"}

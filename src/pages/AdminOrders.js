@@ -125,18 +125,11 @@ function AdminOrders() {
                     ).toLocaleDateString("en-IN")
                   : "N/A"}
               </p>
-
-              <p>
-                Items:{" "}
-                {order.items
-                  ? order.items.reduce(
+ <p> Items:{" "}
+{order.items
+       ? order.items.reduce(
                       (total, item) =>
-                        total +
-                        Number(
-                          item.quantity || 0
-                        ),
-                      0
-                    )
+                        total + Number( item.quantity || 0  ), 0 )
                   : 0}
               </p>
 
@@ -157,12 +150,12 @@ function AdminOrders() {
               >
                 VIEW DETAILS
               </Link>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
+               </div>
+             ))}
+             </div>
+            )}
+         </div>
+          );
+         }
 
 export default AdminOrders;

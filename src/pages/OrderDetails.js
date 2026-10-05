@@ -172,7 +172,6 @@ function OrderDetails() {
 
         <p>
           <strong>Order ID:</strong>{" "}
-          {order._id}
         </p>
 
         <p>

@@ -131,28 +131,27 @@ function AdminProducts() {
           <tbody>
             {products.map((product) => (
               <tr key={product._id}>
-                <td>{product.name}</td>
+         <td>{product.name}</td>
+        <td>₹{product.price}</td>
 
-                <td>₹{product.price}</td>
-
-                <td>
+         <td>
                   {product.category?.name || product.category}
                 </td>
 
                 <td>{product.quantity}</td>
 
-                <td>
+          <td>
                   <button onClick={() => handleEdit(product)}>
                     Edit
                   </button>
 
-                  <button  onClick={() => handleDelete(product._id)}>
+     <button  onClick={() => handleDelete(product._id)}>
                     Delete
-                  </button>
-                </td>
+         </button>
+          </td>
               </tr>
-            ))}
-          </tbody>
+             ))}
+   </tbody>
         </table>
       )}
     </div>

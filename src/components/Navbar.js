@@ -7,6 +7,7 @@ function Navbar() {
 
   const { user, isLoggedIn, logout } = useAuth();
   const { cartCount } = useCart();
+  
 
   function handleLogout() {
     logout();

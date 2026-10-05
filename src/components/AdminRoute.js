@@ -2,6 +2,7 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 function AdminRoute() {
+
   const { isLoggedIn, isAdmin } = useAuth();
 
   if (!isLoggedIn) {

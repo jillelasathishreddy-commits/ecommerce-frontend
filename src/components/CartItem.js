@@ -6,16 +6,11 @@ function CartItem({
   onRemove,
 }) {
   const product = item.product || item;
-
-  const productId = product._id;
-
-  const price = Number(product.price || 0);
-
-  const quantity = Number(item.cartQuantity || 1);
-
-  const itemTotal = price * quantity;
-
-  return (
+const productId = product._id;
+const price = Number(product.price || 0);
+const quantity = Number(item.cartQuantity || 1);
+const itemTotal = price * quantity;
+return (
     <div className="cart-item">
 
       <img
@@ -24,17 +19,15 @@ function CartItem({
         className="cart-image"
       />
 
-      <div className="cart-details">
-
-        <h2>{product.name}</h2>
-
-        <p>
+<div className="cart-details">
+<h2>{product.name}</h2>
+<p>
           ₹{price.toLocaleString("en-IN")}
         </p>
 
         <div className="quantity-controls">
 
-          <button
+<button
             onClick={() =>
               onUpdateQuantity(productId, -1)
             }
@@ -43,7 +36,7 @@ function CartItem({
             -
           </button>
 
-          <span>{quantity}</span>
+<span>{quantity}</span>
 
           <button
             onClick={() =>
@@ -53,10 +46,10 @@ function CartItem({
             +
           </button>
 
-        </div>
+   </div>
 
         <p>
-          Item Total: ₹
+          Item Total: 
           {itemTotal.toLocaleString("en-IN")}
         </p>
 
@@ -69,7 +62,7 @@ function CartItem({
           REMOVE
         </button>
 
-      </div>
+ </div>
 
     </div>
   );

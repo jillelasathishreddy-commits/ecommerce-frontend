@@ -9,7 +9,7 @@ function AdminDashboard() {
         <p>Manage your e-commerce application</p>
       </div>
 
-      <div className="admin-dashboard-cards">
+   <div className="admin-dashboard-cards">
         <div className="admin-dashboard-card">
           <h2>Orders</h2>
           <p>View and manage customer orders</p>

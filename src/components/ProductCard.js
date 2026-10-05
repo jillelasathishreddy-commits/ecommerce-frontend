@@ -12,14 +12,14 @@ function ProductCard({ product }) {
         className="product-image"
       />
 
-      <div className="product-information">
-        <h2>{product.name}</h2>
+<div className="product-information">
+  <h2>{product.name}</h2>
 
         <p className="category">
           {product.category?.name || product.category}
         </p>
 
-        <p className="price">
+  <p className="price">
           {product.price.toLocaleString("en-IN")}
         </p>
 
@@ -28,7 +28,7 @@ function ProductCard({ product }) {
             Sold Out
           </button>
         ) : (
-          <button
+   <button
             className="add-button"
             onClick={() => addToCart(product, 1)}
           >
@@ -40,7 +40,7 @@ function ProductCard({ product }) {
           to={`/products/${product._id}`}
           className="view-details-button"
         >
-          BUY NOW
+          View Details
         </Link>
       </div>
     </div>

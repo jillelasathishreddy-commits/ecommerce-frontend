@@ -299,11 +299,11 @@ function Checkout() {
               ? "PLACING ORDER..."
               : "PLACE ORDER"}
 
-          </button>
+     </button>
 
-        </div>
+  </div>
 
-        <div className="checkout-summary">
+    <div className="checkout-summary">
 
           <h2>ORDER SUMMARY</h2>
 
@@ -315,12 +315,12 @@ function Checkout() {
             Total: ₹
             {cartTotal.toLocaleString(
               "en-IN"
-            )}
-          </p>
+    )}
+ </p>
 
-        </div>
+  </div>
 
-      </div>
+   </div>
 
     </div>
   );

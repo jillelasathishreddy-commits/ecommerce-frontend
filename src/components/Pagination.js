@@ -8,25 +8,25 @@ function Pagination({
   return (
     <div className="pagination">
 
-      <button
+  <button
         onClick={() => setCurrentPage(currentPage - 1)}
         disabled={currentPage === 1}
       >
         Previous
       </button>
 
-      <span>
+<span>
         Page {currentPage} of {totalPages}
       </span>
 
-      <button
+ <button
         onClick={() => setCurrentPage(currentPage + 1)}
         disabled={currentPage === totalPages}
-      >
+ >
         Next
       </button>
 
-    </div>
+ </div>
   );
 }
 

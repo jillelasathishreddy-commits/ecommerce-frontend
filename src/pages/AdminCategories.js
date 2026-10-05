@@ -94,11 +94,11 @@ function AdminCategories() {
         method: method,
 
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+       "Content-Type": "application/json",
+       Authorization: `Bearer ${token}`,
         },
 
-        body: JSON.stringify({
+     body: JSON.stringify({
           name: name,
           status: status,
         }),
@@ -217,10 +217,7 @@ function AdminCategories() {
       </h2>
 
       <form onSubmit={handleSubmit}>
-
-       
-
-        <div>
+<div>
           <label>Category Name</label>
 
           <input
@@ -229,13 +226,9 @@ function AdminCategories() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-        </div>
-
-        <br />
-
-       
-
-        <div>
+   </div>
+<br />
+ <div>
           <label>Status</label>
 
           <select
@@ -322,8 +315,7 @@ function AdminCategories() {
 
       {categories.length > 0 && (
         <ul>
-
-          {categories.map((category) => (
+   {categories.map((category) => (
 
             <li key={category._id}>
 
@@ -337,11 +329,9 @@ function AdminCategories() {
 
              
 
-              <button
-                onClick={() =>
-                  handleEdit(category)
-                }
-              >
+     <button onClick={() => handleEdit(category)} >
+                
+              
                 Edit
               </button>
 

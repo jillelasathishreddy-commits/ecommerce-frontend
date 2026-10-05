@@ -15,7 +15,6 @@ function ProductFilters({
   return (
     <div className="product-filters">
 
-      {/* Category */}
       <div className="filter-group">
         <label>Category</label>
 
@@ -35,8 +34,6 @@ function ProductFilters({
           ))}
         </select>
       </div>
-
-      {/* Minimum Price */}
       <div className="filter-group">
         <label>Min Price</label>
 
@@ -48,8 +45,7 @@ function ProductFilters({
         />
       </div>
 
-      {/* Maximum Price */}
-      <div className="filter-group">
+  <div className="filter-group">
         <label>Max Price</label>
 
         <input
@@ -60,7 +56,6 @@ function ProductFilters({
         />
       </div>
 
-      {/* Sort */}
       <div className="filter-group">
         <label>Sort By</label>
 
@@ -75,8 +70,6 @@ function ProductFilters({
           <option value="name-z-a">Name: Z-A</option>
         </select>
       </div>
-
-      {/* Clear */}
       <button
         className="clear-filters-btn"
         onClick={onClear}

@@ -12,14 +12,14 @@ function OrderItem({ item }) {
         </p>
 
         <p>
-          Price: ₹
+          Price: 
           {Number(item.price || 0).toLocaleString("en-IN")}
         </p>
       </div>
 
       <div>
         <strong>
-          ₹
+          
           {Number(item.total || 0).toLocaleString("en-IN")}
         </strong>
       </div>

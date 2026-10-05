@@ -14,15 +14,11 @@ export function AuthProvider({ children }) {
 
   const isLoggedIn = !!token;
 
-  const isAdmin =
-    isLoggedIn && user?.role === "admin";
+  const isAdmin = isLoggedIn && user?.role === "admin";
 
   function login(token, user) {
     localStorage.setItem("token", token);
-    localStorage.setItem(
-      "user",
-      JSON.stringify(user)
-    );
+    localStorage.setItem("user", JSON.stringify(user));
 
     setToken(token);
     setUser(user);
